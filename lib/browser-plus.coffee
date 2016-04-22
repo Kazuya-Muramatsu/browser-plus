@@ -96,7 +96,7 @@ module.exports = BrowserPlus =
     favList = require './fav-view'
     # new favList(@fav)
     fs = require 'fs'
-    fs.readFile '/tmp/.atom-browser-plus-fav.json', 'utf-8', (err, txt)->
+    fs.readFile '/var/tmp/.atom-browser-plus-fav.json', 'utf-8', (err, txt)->
       if not err
         new favList(JSON.parse(txt))
       else
